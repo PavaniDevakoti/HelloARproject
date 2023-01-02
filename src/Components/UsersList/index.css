@@ -1,0 +1,112 @@
+.users-list-container {
+  padding: 30px;
+}
+.add-user-button {
+  margin: 20px;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  background-color: rgb(27, 214, 73);
+}
+.user-details-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.popup-card {
+  display: flex;
+  align-self: flex-end;
+}
+table {
+  width: 800px;
+  height: 200px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+th {
+  border: 1px solid black;
+  text-align: center;
+  background-color: lightgray;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+}
+.delete-icon {
+  background-color: rgb(27, 214, 73);
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+}
+.icon {
+  color: #ffffff;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.userName-input {
+  margin-bottom: 20px;
+}
+.user-label {
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.addUser-main-container {
+  display: flex;
+  flex-direction: row;
+}
+.addUser-card {
+  background-color: lightcoral;
+  padding: 20px;
+  width: 30%;
+  margin-right: 20px;
+}
+.addUserUrl {
+  height: 100px;
+  width: 100px;
+}
+.addUser-para {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+.cancel-btn {
+  margin: 20px;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  background-color: rgb(231, 177, 39);
+  color: #ffffff;
+}
+.add-btn {
+  margin: 20px;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  color: #ffffff;
+  background-color: rgb(27, 214, 73);
+}
