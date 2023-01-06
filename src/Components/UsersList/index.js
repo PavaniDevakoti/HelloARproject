@@ -1,10 +1,12 @@
 import { Component } from "react";
+
 import Popup from "reactjs-popup";
-import TimeAgo from "react-timeago";
 import "reactjs-popup/dist/index.css";
 
 import { RiDeleteBin6Line } from "react-icons/ri";
 import "./index.css";
+
+const dummyLastSignedIn = ["Within 1 hour", "2 days ago", "2 hours ago"];
 
 class UsersList extends Component {
   state = {
@@ -12,7 +14,7 @@ class UsersList extends Component {
     allUsersList: [],
     userName: "",
     userRole: "Admin",
-    date: "",
+    lastSigned: dummyLastSignedIn[0],
   };
 
   onChangeUserName = (event) => {
@@ -25,16 +27,29 @@ class UsersList extends Component {
 
   onSubmitUser = (event) => {
     event.preventDefault();
-    const newDate = Date.now();
 
-    const { usersList, userName, userRole, allUsersList } = this.state;
-    const userDetails = { id: usersList.length, userName, userRole };
+    const {
+      usersList,
+      userName,
+      userRole,
+      allUsersList,
+      lastSigned,
+    } = this.state;
+
+    const userDetails = {
+      id: usersList.length,
+      userName,
+      userRole,
+      lastSigned,
+    };
+
     this.setState((prevState) => ({
       usersList: [...prevState.usersList, userDetails],
       allUsersList: [...prevState.allUsersList, userDetails],
       userName: "",
       userRole: "Admin",
-      date: newDate,
+      lastSigned: dummyLastSignedIn[Math.floor(Math.random() * 3.9)],
+      popup: !prevState.popup,
     }));
 
     localStorage.setItem(
@@ -50,7 +65,7 @@ class UsersList extends Component {
   };
 
   render() {
-    const { usersList, userName, userRole, date } = this.state;
+    const { usersList, userName, userRole } = this.state;
 
     return (
       <div className="users-list-container">
@@ -146,9 +161,7 @@ class UsersList extends Component {
               <tr key={each.id}>
                 <td>{each.id + 1}</td>
                 <td>{each.userName}</td>
-                <td>
-                  <TimeAgo date={date} />
-                </td>
+                <td>{each.lastSigned}</td>
                 <td>{each.userRole}</td>
                 <td>
                   <button

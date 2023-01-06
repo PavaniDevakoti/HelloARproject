@@ -1,12 +1,12 @@
 .users-list-container {
-  padding: 30px;
+  padding-left: 20px;
 }
 .add-user-button {
-  margin: 20px;
   border-radius: 10px;
   height: 30px;
   width: 100px;
   border: none;
+
   background-color: rgb(27, 214, 73);
 }
 .user-details-container {
@@ -26,22 +26,27 @@
   align-self: flex-end;
 }
 table {
-  width: 800px;
-  height: 200px;
+  width: 600px;
   border-collapse: collapse;
   border: 1px solid black;
-  margin: 20px;
+  margin-top: 20px;
+  position: fixed;
 }
 
 th {
   border: 1px solid black;
   text-align: center;
   background-color: lightgray;
+  height: 40px;
+}
+
+tr {
+  height: 50px;
 }
 
 td {
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid darkgray;
 }
 .delete-icon {
   background-color: rgb(27, 214, 73);
@@ -57,13 +62,6 @@ td {
   text-align: center;
 }
 
-.container {
-  display: flex;
-  text-align: center;
-  padding: 30px;
-  justify-content: center;
-  align-items: center;
-}
 .userName-input {
   margin-bottom: 20px;
 }
@@ -109,4 +107,8 @@ td {
   border: none;
   color: #ffffff;
   background-color: rgb(27, 214, 73);
+}
+.tab-heading {
+  display: flex;
+  justify-content: center;
 }
